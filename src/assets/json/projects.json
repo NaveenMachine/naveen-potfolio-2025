@@ -1,0 +1,20 @@
+{
+    "Degree Audit Parser": {
+        "tools": "React.js, Python, Ohio State Class Api",
+        "description": "",
+        "imagePath": "",
+        "link": ""
+    },
+    "Eye Tracing Keyboard": {
+        "tools": "Python, OpenCV, Flask, HTML, CSS", 
+        "description": "Keyboard that allows people to type with their pupils",
+        "imagePath": "",
+        "link": ""
+    },
+    "Lanarchy Website": {
+        "tools": "React.js, CSS, Bootstrap",
+        "description": "Custom website for Ohio State Club",
+        "imagePath": "",
+        "link": ""
+    }
+}

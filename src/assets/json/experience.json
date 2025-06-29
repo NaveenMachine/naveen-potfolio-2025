@@ -1,0 +1,44 @@
+{
+    "education": [
+        [
+            "Ohio State University - Columbus",
+            "BS in Computer Science & Engineer",
+            "Minor in Biomedical Engineering",
+            "May 2027"
+        ],
+        [
+            "Springboro High School",
+            "General Education Degree",
+            "May 2023"
+        ]
+    ],
+    "work": [
+        [
+            "Software Engineer Intern",
+            "Air Force Research Lab",
+            "June 2025 - August 2025"
+        ],
+        [
+            "Software Engineer Intern",
+            "Air Force Research Lab",
+            "June 2024 - August 2024"
+        ],
+        [
+            "Software Engineer Intern",
+            "Air Force Research Lab",
+            "June 2023 - August 2023"
+        ]
+    ],
+    "projects": [
+        [
+            "AI CGM Data Modeling",
+            "Ohio State Medical Center",
+            "May 2025 - Present"
+        ],
+        [
+            "Medical Health App",
+            "Ohio State Medical Center",
+            "August 2024 - Febuary 2025"
+        ]
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "Languages": [
+        ["JavaScript", 2016],
+        ["HTML/CSS", 2016],
+        ["Java", 2018],
+        ["Python", 2020],
+        ["React.js", 2023],
+        ["Assembly", 2025],
+        ["C", 2025]
+    ],
+    "Fullstack": [
+        ["Android Studio", 2019],
+        ["React", 2023],
+        ["SQL", 2023],
+        ["Flask", 2024]
+    ],
+    "Robotics/Hardware": [
+        ["Arduino", 2023],
+        ["Raspberry Pi", 2025],
+        ["VHDL", 2025]
+    ],
+    "Other": [
+        ["Git", 2019],
+        ["Machine Learning", 2023],
+        ["Artifical Intelligence", 2024],
+        ["Matlab", 2024],
+        ["Operating Systems", 2024]
+    ]
+}
+
