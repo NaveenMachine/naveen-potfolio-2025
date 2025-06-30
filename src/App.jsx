@@ -12,20 +12,27 @@ import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 
 function App() {
+  const links = ['Home', 'Projects', 'About', 'Contact']; // You can modify this as needed
+
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <section className="body">
-        <Container className="box">
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-        </Container>
-      </section>
-      <Contact />
-      <Footer />
+      <NavBar links={links} />
+      
+      {/* Offset content to avoid being hidden under the fixed AppBar */}
+      {/* <div style={{ paddingTop: '80px' }}> */}
+      <div>
+        <Banner />
+        <section className="body">
+          <Container className="box">
+            <About />
+            <Skills />
+            <Experience />
+            <Projects />
+          </Container>
+        </section>
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
