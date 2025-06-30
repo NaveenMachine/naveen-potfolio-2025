@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState, useEffect } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react'
 import data from '../assets/json/chunk-text.json'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
@@ -25,11 +24,9 @@ const Banner = () => {
             }
         }
         window.addEventListener('scroll', onScroll)
-        
+
         let ticker = setInterval(() => {
-            if (scrolled) {
-                return
-            }
+            if (scrolled) return
             tick()
         }, delta)
 
@@ -41,11 +38,13 @@ const Banner = () => {
 
     const tick = () => {
         let i = loopNum % toRotate.length
-        let fullText = tooRotate[i]
+        let fullText = toRotate[i]
 
-        let newText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
+        let newText = isDeleting
+            ? fullText.substring(0, text.length - 1)
+            : fullText.substring(0, text.length + 1)
 
-        if (!isDeletign && newText == fullText) {
+        if (!isDeleting && newText === fullText) {
             setDelta(2000)
             setIsDeleting(true)
         } else if (isDeleting && newText === '') {
@@ -58,31 +57,30 @@ const Banner = () => {
 
         setText(newText)
     }
+
     return (
         <section className="banner" id="home">
-            <Contianer>
+            <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7} className="column">
                         <h1>
                             {`I'm Naveen, a `}
-                                <span className="wrap">
-                                    {text}
-                                </span>
+                            <span className="wrap">{text}</span>
                         </h1>
                         <p>{banner_text}</p>
                         <div className="button-container">
-                            <a href="https://github.com/NaveenMachine" target="_blank" rel="noreferrer">Stalk my GitHub <ArrowRightCircle size={25}/></a>
+                            <a href="https://github.com/NaveenMachine" target="_blank" rel="noreferrer">
+                                Stalk my GitHub <ArrowRightCircle size={25} />
+                            </a>
                         </div>
                     </Col>
                     <Col xs={12} md={6} xl={5} className="img-col">
-                        <img src={headerImg} alt="header img"/>
+                        <img src={headerImg} alt="header img" />
                     </Col>
                 </Row>
-            </Contianer>
+            </Container>
         </section>
     )
-
 }
 
 export default Banner
-
