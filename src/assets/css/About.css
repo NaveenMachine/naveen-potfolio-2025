@@ -1,0 +1,61 @@
+/* Scoped About Section */
+.about {
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+  
+  .about p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 0px 0 40px 0;
+  }
+  
+  .abt-img {
+    width: 300px;
+    border-radius: 0.5rem;
+  }
+  
+  .button-link {
+    margin-top: 20px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .about p {
+      font-size: 16px;
+      margin: 40px 20px;
+    }
+  
+    .abt-img {
+      max-width: 300px;
+      width: 90%;
+      border-radius: 0.5rem;
+      justify-self: center;
+      align-self: center;
+      margin-top: 20px;
+    }
+  
+    .about {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .abt-img {
+      margin-top: 0px;
+    }
+  
+    .about {
+      margin-bottom: 70px;
+      width: 100%;
+    }
+  
+    .about p {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  

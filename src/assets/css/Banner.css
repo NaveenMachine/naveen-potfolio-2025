@@ -1,0 +1,112 @@
+.banner {
+    margin-top: 0;
+    padding: 150px 0 100px 0;
+    /* background-image: url('../img/cartoon_naveen.png'); */
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .banner p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+  }
+
+  .banner a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .banner a svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 1;
+  }
+
+  .banner a:hover svg {
+    margin-left: 25px;
+  }
+
+  .banner img {
+    animation: updown 3s linear infinite;
+  }
+
+  @keyframes updown {
+      0% {
+          transform: translateY(-20px);
+      }
+      50% {
+          transform: translateY(20px);
+      }
+      100% {
+          transform: translateY(-20px);
+      }
+  }
+
+  .txt-rotate > .wrap {
+    border-right: 0.08em solid #666;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .banner {
+        /* background-image: url('../img/cartoon_naveen.png'); */
+        padding: 175px 0 100px 0;
+        text-align: center;
+    }
+
+    .banner .container {
+        width: 95%;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .banner p {
+        font-size: 16px;
+        margin: 0 auto !important;
+    }
+
+    .banner a {
+        font-size: 18px;
+        margin-top: 25px !important;
+        text-align: center;
+    }
+
+    .banner img {
+        max-width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner {
+      padding: 175px 0 50px 0 !important;
+    }
+
+    .banner img {
+      max-width: 300px;
+    }
+
+    .banner a {
+      margin-top: 0px;
+    }
+  }
