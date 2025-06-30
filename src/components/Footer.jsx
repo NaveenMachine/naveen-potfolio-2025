@@ -14,7 +14,7 @@ export default function Footer() {
       justifyContent="center"
       sx={{
         width: '100%',
-        backgroundColor: 'secondary.main',
+        backgroundColor: '#121212',
         color: 'white',
         py: 3,
         px: 2,
