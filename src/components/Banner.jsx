@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react-bootstrap'
 import data from '../assets/json/chunk-text.json'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import headerImg from '../assets/img/cartoonNaveen.png'
+import headerImg from '../assets/img/cartoon_naveen.png'
 import '../assets/css/Banner.css'
 
 const Banner = () => {
