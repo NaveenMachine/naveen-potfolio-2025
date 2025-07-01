@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const images = import.meta.glob('../assets/img/projects/*.{png,jpg,jpeg,svg}', { eager: true });
+const images = import.meta.glob('../assets/img/projects/*.{avif,png,jpg,jpeg,svg}', { eager: true });
 
 const Projects = () => {
   const projects = Object.keys(data).map((key) => {

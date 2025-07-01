@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import data from '../assets/json/chunk-text.json'
 import { Container, Row, Col } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import headerImg from '../assets/img/cartoon_naveen.png'
+import headerImg from '../assets/img/cartoon_naveen.avif'
 import '../assets/css/Banner.css'
 
 const Banner = () => {

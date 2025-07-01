@@ -4,7 +4,7 @@ import '../assets/css/About.css';
 import data from '../assets/json/chunk-text.json';
 import resume from '../assets/resume.pdf';
 
-const images = import.meta.glob('../assets/img/naveen/*.{png,jpg,jpeg,svg}', { eager: true });
+const images = import.meta.glob('../assets/img/naveen/*.{png,jpg,jpeg,svg,avif}', { eager: true });
 
 const About = () => {
   const about_text = data.about;
