@@ -55,7 +55,7 @@ const About = () => {
         </Col>
         <Col xs={12} lg={5}>
           <p>{about_text}</p>
-          <a className="button-link" href={resume} download>
+          <a className="button-link" href={resume} download="Naveen_Kamath_Resume.pdf">
             <span>Resume</span>
           </a>
         </Col>
