@@ -24,6 +24,7 @@
     "react-bootstrap": "^2.10.10",
     "react-bootstrap-icons": "^1.11.6",
     "react-dom": "^19.1.0",
+    "react-scroll": "^1.9.3",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

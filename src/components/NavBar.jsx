@@ -16,6 +16,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useState } from 'react';
 import DrawerComp from './Drawer';
 import PropTypes from 'prop-types';
+import { Link } from 'react-scroll';
 
 export default function NavBar({ links }) {
   const theme = useTheme();
@@ -68,10 +69,20 @@ export default function NavBar({ links }) {
                 indicatorColor="secondary"
                 textColor="inherit"
                 value={value}
+                // The onChange is less critical now, but we'll keep it
                 onChange={(e, val) => setValue(val)}
               >
                 {links.map((link, index) => (
-                  <Tab key={index} label={link} />
+                  <Tab
+                    key={index}
+                    label={link}
+                    // This is the magic part:
+                    component={Link} // 1. Render the Tab as a react-scroll Link
+                    to={link.toLowerCase()} // 2. Set the target section ID
+                    smooth={true}      // 3. Enable smooth scrolling
+                    offset={-70}       // 4. Offset for your fixed navbar
+                    duration={500}     // 5. Set the scroll speed
+                  />
                 ))}
               </Tabs>
 

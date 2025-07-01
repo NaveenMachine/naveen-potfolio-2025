@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// 1. Import Link from react-scroll
+import { Link } from 'react-scroll';
 
 export default function DrawerComp({ links }) {
   const [open, setOpen] = useState(false);
@@ -35,32 +37,49 @@ export default function DrawerComp({ links }) {
             Naveen's Portfolio
           </Typography>
           <List>
+            {/* 2. Modify the mapped links */}
             {links.map((link, index) => (
-              <ListItemButton key={index} onClick={() => setOpen(false)}>
+              <ListItemButton
+                key={index}
+                component={Link}
+                to={link.toLowerCase()}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => setOpen(false)} // This correctly closes the drawer on click
+              >
                 <ListItemText sx={{ color: 'white', textAlign: 'center' }} primary={link} />
               </ListItemButton>
             ))}
-            {/* Row of Icon Buttons */}
+            
+            {/* 3. Wrap social media icons in <a> tags */}
             <Box
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                gap: 2, // Spacing between buttons
+                gap: 2,
                 marginTop: 2,
               }}
             >
-              <IconButton sx={{ background: 'white' }}>
-                <LinkedInIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
-              </IconButton>
-              <IconButton sx={{ background: 'white' }}>
-                <GitHubIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
-              </IconButton>
-              <IconButton sx={{ background: 'white' }}>
-                <InstagramIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
-              </IconButton>
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ background: 'white' }}>
+                  <LinkedInIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
+                </IconButton>
+              </a>
+              <a href="https://github.com/NaveenMachine" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ background: 'white' }}>
+                  <GitHubIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
+                </IconButton>
+              </a>
+              <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+                <IconButton sx={{ background: 'white' }}>
+                  <InstagramIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
+                </IconButton>
+              </a>
             </Box>
-            {/* Centered Contact Button */}
+
+            {/* 4. Modify the Contact button */}
             <Box
               sx={{
                 display: 'flex',
@@ -69,6 +88,12 @@ export default function DrawerComp({ links }) {
               }}
             >
               <Button
+                component={Link}
+                to="contact"
+                smooth={true}
+                offset={-70}
+                duration={500}
+                onClick={() => setOpen(false)} // Also close drawer on click
                 sx={{
                   background: 'white',
                   '&:hover': {
@@ -105,5 +130,5 @@ export default function DrawerComp({ links }) {
 
 // Define prop types for the NavBar component
 DrawerComp.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.string).isRequired, // Validate 'links' as a required array of strings
+  links: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
