@@ -87,22 +87,46 @@ export default function NavBar({ links }) {
               </Tabs>
 
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
-                  <LinkedInIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
-                </IconButton>
-                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
-                  <GitHubIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
-                </IconButton>
-                <IconButton sx={{ background: 'rgba(2,0,36,1)' }}>
-                  <InstagramIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
-                </IconButton>
-                <Button
-                  sx={{ marginLeft: 5, background: 'rgba(2,0,36,1)' }}
-                  variant="contained"
+                {/* LinkedIn Button */}
+                <IconButton
+                    sx={{ background: 'rgba(2,0,36,1)' }}
+                    component="a" // <--- PLACE THESE PROPS HERE on the IconButton
+                    href="https://www.linkedin.com/in/naveen-kamath-434668287/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                  Contact
+                    <LinkedInIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
+                </IconButton>
+
+                {/* GitHub Button */}
+                <IconButton
+                    sx={{ background: 'rgba(2,0,36,1)' }}
+                    component="a" // <--- PLACE THESE PROPS HERE on the IconButton
+                    href="https://www.github.com/NaveenMachine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <GitHubIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
+                </IconButton>
+
+                {/* Instagram Button */}
+                <IconButton
+                    sx={{ background: 'rgba(2,0,36,1)' }}
+                    component="a" // <--- PLACE THESE PROPS HERE on the IconButton
+                    href="https://www.instagram.com/naveenkamath_/?next=%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <InstagramIcon sx={{ color: 'white', '&:hover': { color: 'black' } }} />
+                </IconButton>
+
+                <Button
+                    sx={{ marginLeft: 5, background: 'rgba(2,0,36,1)' }}
+                    variant="contained"
+                >
+                    Contact
                 </Button>
-              </Box>
+            </Box>
             </Box>
           </>
         )}
