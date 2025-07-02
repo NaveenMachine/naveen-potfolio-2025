@@ -76,7 +76,7 @@
   }
   .contact-section form button::before {
     content: "";
-    background-color: #16102c;
+    background-color: #121212;
     width: 0;
     height: 100%;
     position: absolute;

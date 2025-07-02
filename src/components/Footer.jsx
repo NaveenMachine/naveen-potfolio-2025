@@ -32,7 +32,7 @@ export default function Footer() {
           <Grid item>
             <IconButton
               component="a"
-              href="https://instagram.com"
+              href="https://www.instagram.com/naveenkamath_/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -44,7 +44,7 @@ export default function Footer() {
           <Grid item>
             <IconButton
               component="a"
-              href="https://github.com"
+              href="https://github.com/NaveenMachine"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -56,7 +56,7 @@ export default function Footer() {
           <Grid item>
             <IconButton
               component="a"
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/naveen-kamath-434668287/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

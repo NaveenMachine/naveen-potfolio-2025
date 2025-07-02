@@ -31,9 +31,33 @@ const Contact = () => {
         e.preventDefault()
         setButtonText('Sending...')
 
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+        // Basic validation before sending
+        if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.message) {
+            setStatus({ success: false, message: 'Please fill in all fields.' });
+            setButtonText('Send');
+            console.error('Validation Error: Please fill in all fields.');
+            return;
+        }
+
+        // --- THE FIX IS HERE ---
+        // Change import.meta.env.REACT_APP_... to import.meta.env.VITE_...
+        const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;    // <--- Changed to VITE_
+        const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;  // <--- Changed to VITE_
+        const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;    // <--- Changed to VITE_
+
+        // Add a check to ensure they are loaded (good practice)
+        if (!serviceId || !templateId || !publicKey) {
+            console.error("EmailJS environment variables are not loaded! Check .env file and VITE_ prefix.");
+            setStatus({ success: false, message: 'Configuration error: Email service not set up.' });
+            setButtonText('Send');
+            return;
+        }
+        // --- END OF FIX ---
+
+
+        emailjs.sendForm(serviceId, templateId, form.current, publicKey)
             .then((result) => {
-                console.log(result.text)
+                console.log("EmailJS Result:", result.text)
                 setStatus({
                     success: true,
                     message: 'Message sent successfully!'
@@ -41,7 +65,7 @@ const Contact = () => {
                 setButtonText('Send')
                 setFormDetails(formInitialDetails)
             }).catch((error => {
-                console.log(error.text)
+                console.error("EmailJS Error:", error.text || error)
                 setStatus({
                     success: false,
                     message: 'Something went wrong, please try again!'
@@ -62,20 +86,20 @@ const Contact = () => {
                         <form ref={form} onSubmit={sendEmail}>
                             <Row>
                                 <Col size={12} sm={6} className="px-1">
-                                    <input name="first_name" type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)}/>
+                                    <input name="first_name" type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} required/>
                                 </Col>
                                 <Col size={12} sm={6} className="px-1">
-                                <input name="last_name" type="text" value={formDetails.firstName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                                <input name="last_name" type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)} required/>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col size={12} className="px-1">
-                                    <input name="email" type="email" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email', e.target.value)}/>
+                                    <input name="email" type="email" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email', e.target.value)} required/>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col size={12} className="px-1">
-                                    <textarea name="message" row="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}/>
+                                    <textarea name="message" rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)} required/>
                                     <button type="submit">
                                         <span>
                                             {buttonText}
@@ -83,6 +107,13 @@ const Contact = () => {
                                     </button>
                                 </Col>
                             </Row>
+                            {/* Status message display (if you haven't added this from previous suggestions) */}
+                            {
+                                status.message &&
+                                <Col>
+                                    <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
+                                </Col>
+                            }
                         </form>
                     </Col>
                 </Row>
@@ -92,4 +123,3 @@ const Contact = () => {
 }
 
 export default Contact
-

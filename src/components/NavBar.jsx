@@ -113,7 +113,7 @@ export default function NavBar({ links }) {
                 <IconButton
                     sx={{ background: 'rgba(2,0,36,1)' }}
                     component="a" // <--- PLACE THESE PROPS HERE on the IconButton
-                    href="https://www.instagram.com/naveenkamath_/?next=%2F"
+                    href="https://www.instagram.com/naveenkamath_/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -123,6 +123,11 @@ export default function NavBar({ links }) {
                 <Button
                     sx={{ marginLeft: 5, background: 'rgba(2,0,36,1)' }}
                     variant="contained"
+                    component={Link} // <--- ADD THIS
+                    to="contact"     // <--- ADD THIS (assuming your contact section's ID is "contact")
+                    smooth={true}    // <--- ADD THIS
+                    offset={-70}     // <--- ADD THIS (adjust if your navbar height changes)
+                    duration={500}   // <--- ADD THIS
                 >
                     Contact
                 </Button>
