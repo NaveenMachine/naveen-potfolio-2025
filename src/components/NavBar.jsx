@@ -39,6 +39,11 @@ export default function NavBar({ links }) {
                 '&:hover': { background: 'rgba(2,0,36,0.8)' },
                 color: 'white',
               }}
+              component={Link}   // <--- Make the Button render as a react-scroll Link
+              to="home"          // <--- Target the "home" (or "top") section ID
+              smooth={true}      // <--- Enable smooth scrolling
+              offset={-70}       // <--- Adjust if you have a fixed header, otherwise can be 0
+              duration={500}     // <--- Scroll speed in milliseconds
             >
               <Typography component="div">NK</Typography>
             </Button>
@@ -52,6 +57,11 @@ export default function NavBar({ links }) {
                 '&:hover': { background: 'rgba(2,0,36,0.8)' },
                 color: 'white',
               }}
+              component={Link}   
+              to="home"         
+              smooth={true}      
+              offset={-70}       
+              duration={500}     
             >
               <Typography component="div">NK</Typography>
             </Button>
