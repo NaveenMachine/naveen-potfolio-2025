@@ -62,7 +62,7 @@ export default function DrawerComp({ links }) {
                 marginTop: 2,
               }}
             >
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/naveen-kamath-434668287" target="_blank" rel="noopener noreferrer">
                 <IconButton sx={{ background: 'white' }}>
                   <LinkedInIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
                 </IconButton>
@@ -72,7 +72,7 @@ export default function DrawerComp({ links }) {
                   <GitHubIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
                 </IconButton>
               </a>
-              <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/naveenkamath_/" target="_blank" rel="noopener noreferrer">
                 <IconButton sx={{ background: 'white' }}>
                   <InstagramIcon sx={{ color: 'black', '&:hover': { color: 'white' } }} />
                 </IconButton>
