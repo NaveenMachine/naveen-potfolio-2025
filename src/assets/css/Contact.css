@@ -88,6 +88,13 @@
   .contact-section form button:hover::before {
     width: 100%;
   }
+
+  .contact-section p {
+    color: #b8b8b8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    margin-top: 10px;
+}
   
   @media screen and (max-width: 1200px) {
     .contact-section {

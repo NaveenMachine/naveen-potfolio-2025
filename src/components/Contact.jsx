@@ -83,6 +83,7 @@ const Contact = () => {
                     </Col>
                     <Col>
                         <h1>Get In Touch</h1>
+                        <p>If you made it this far, let's coffee chat.</p>
                         <form ref={form} onSubmit={sendEmail}>
                             <Row>
                                 <Col size={12} sm={6} className="px-1">
