@@ -39,7 +39,7 @@ const Projects = () => {
               rel="noreferrer"
             >
               <span>
-                GitHub
+                {data[key].linkLabel || 'GitHub'}
                 <ArrowRightShort className="button-icon" />
               </span>
             </a>

@@ -1,4 +1,11 @@
 {
+    "RankTheRivalry.com": {
+        "tools": "AWS CDK, CloudFront, API Gateway, Lambda (Python), DynamoDB, Cloudflare Turnstile, React.js, Selenium",
+        "description": "A national college rivalry voting platform with 8,600+ unique users and 205k+ votes. Serverless AWS stack with sub-200ms P50 latency, anti-bot defenses using Cloudflare Turnstile and HMAC-SHA256 payload obfuscation, and a weighted Elo-based pairing engine with exposure-debt balancing across 250+ pairs.",
+        "imagePath": "RankTheRivalryV3.avif",
+        "link": "https://ranktherivalry.com",
+        "linkLabel": "Live Demo"
+    },
     "Lanarchy Website": {
         "tools": "React.js, CSS, Bootstrap",
         "description": "Custom website for Ohio State Gaming Club.",
